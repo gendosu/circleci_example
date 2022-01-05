@@ -19,13 +19,13 @@ anchors:
 
       # Which version of bundler?
       - run:
-          name: Which bundler?
-          command: bundle -v
+          name: install bundler v2.2.33
+          command: gem install bundler -v2.2.33
 
       # Which version of bundler?
       - run:
-          name: install bundler v2.2.33
-          command: gem install bundler -v2.2.33
+          name: Which bundler?
+          command: bundle -v
 
       # Restore bundle cache
       - restore_cache:
