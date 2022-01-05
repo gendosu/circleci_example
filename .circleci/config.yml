@@ -22,12 +22,20 @@ anchors:
           name: Which bundler?
           command: bundle -v
 
+      # Which version of bundler?
+      - run:
+          name: install bundler v2.2.33
+          command: gem install bundler -v2.2.33
+
       # Restore bundle cache
       - restore_cache:
           keys:
             - rails-demo-bundle-v3-{{ checksum "Gemfile.lock" }}
             - rails-demo-bundle-v3-
 
+      - run:
+          name: show platform
+          command: uname -m
       - run:
           name: Bundle Install
           command: bundle install --clean --jobs 16 --path ./vendor/bundle --retry 3 --without development production && bundle clean
