@@ -1,17 +1,23 @@
+GIT
+  remote: https://github.com/rubyjs/mini_racer
+  revision: 2a7c5cccaa6ed1222a38c6a8efdd669a7897b1a2
+  branch: master
+  specs:
+    mini_racer (0.6.0)
+      libv8-node (~> 16.10.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
     libv8-node (16.10.0.0)
     libv8-node (16.10.0.0-x86_64-linux)
-    mini_racer (0.6.0)
-      libv8-node (~> 16.10.0.0)
 
 PLATFORMS
   ruby
   x86_64-linux
 
 DEPENDENCIES
-  mini_racer
+  mini_racer!
 
 BUNDLED WITH
    2.2.33
