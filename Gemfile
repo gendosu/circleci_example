@@ -25,6 +25,7 @@ gem 'aasm'
 gem 'active_record-deselect'
 gem 'bcrypt-ruby'
 gem 'browser'
+gem 'cld3', '~> 3.3'
 gem 'enum_help', '~> 0.0.17'
 gem 'faraday'
 gem 'faraday_middleware'
@@ -66,6 +67,7 @@ gem 'batch-loader'
 # File Upload
 gem 'carrierwave'
 gem 'fastimage'
+gem 'fog', '~> 1.42.0' # json gem との依存関係のため
 gem 'mimemagic'
 gem 'mini_magick'
 gem 'ruby-sox' # SOund eXchange
@@ -135,6 +137,9 @@ gem 'unwind'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
+# Google Analytics
+gem 'garb', github: 'Sija/garb', tag: 'v0.9.8'
+
 # Sitemap
 gem 'sitemap_generator'
 
@@ -151,17 +156,14 @@ gem 'activerecord-refresh_connection'
 gem 'holiday_jp', '~> 0.8.0'
 gem 'retriable'
 
-# CAVEAT!!
-# gon gemを v6.3以上に上げると app/views/prefetch/_note_app.html.haml のjavascriptをrenderする箇所でjsが
-# 解釈できない形に変換されjs描画ができず障害になる.
-# angularがなくなり、app/views/prefetch/_note_app.html.hamlが必要なくなるまで放置する
-# なにかのgemのupdateに引きずられてgonも上がってしまうのを防ぐため6.2.1に固定する
 gem 'gon', '6.2.1'
 
 gem 'switch_point'
 
 gem 'autoprefixer-rails'
 gem 'rack-rewrite'
+
+gem 'asset_sync'
 
 gem 'hashie'
 
