@@ -18,9 +18,9 @@ anchors:
           command: apt-get update && apt-get install -y libprotobuf-dev libprotoc-dev protobuf-compiler
 
       # Which version of bundler?
-      - run:
-          name: install bundler v2.2.33
-          command: gem install bundler -v2.2.33
+      # - run:
+      #     name: install bundler v2.2.33
+      #     command: gem install bundler -v2.2.33
 
       # Which version of bundler?
       - run:
