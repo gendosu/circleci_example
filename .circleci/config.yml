@@ -9,6 +9,14 @@ anchors:
     working_directory: ~/circleci
     docker:
       - image: ruby:2.7.2
+      - image: mysql:5.7.27
+        command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --innodb-large-prefix=true --innodb-file-format=Barracuda
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_USER: test
+          MYSQL_PASSWORD: note
+          MYSQL_DATABASE: note_test
     steps:
       - checkout
 
